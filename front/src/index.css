@@ -1,0 +1,315 @@
+/* index.css */
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #1e1e1e;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 600;
+  color: #646cff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #1e1e1e;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: #646cff;
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+button:hover {
+  background-color: #535bf2;
+  transform: translateY(-1px);
+}
+button:active {
+  transform: translateY(0);
+}
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+input {
+  border-radius: 8px;
+  border: 1px solid #444;
+  padding: 0.75em 1em;
+  font-size: 1em;
+  font-family: inherit;
+  background-color: #2d2d2d;
+  color: white;
+  transition: border-color 0.25s;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+input:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.2);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #f5f5f5;
+  }
+  body {
+    background-color: #f5f5f5;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #646cff;
+    color: white;
+  }
+  input {
+    background-color: white;
+    color: #213547;
+    border-color: #ddd;
+  }
+}
+
+/* App.css */
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #2d2d2d;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-title {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.message-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #2d2d2d;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.message-item {
+  background-color: #3a3a3a;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  word-break: break-word;
+}
+
+.message-input-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.message-input {
+  flex: 1;
+}
+
+.link-text {
+  margin-top: 1rem;
+  color: #aaaaaa;
+}
+
+.message-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #2d2d2d;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #3a3a3a;
+  border-radius: 8px;
+}
+
+.message-input, .message-textarea {
+  border-radius: 8px;
+  border: 1px solid #444;
+  padding: 0.75em 1em;
+  font-size: 1em;
+  font-family: inherit;
+  background-color: #2d2d2d;
+  color: white;
+  transition: all 0.25s;
+  width: 100%;
+}
+
+.message-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.send-button {
+  align-self: flex-end;
+  padding: 0.75em 1.5em;
+}
+
+.messages-list {
+  margin-top: 2rem;
+}
+
+.message-items {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.message-item {
+  background-color: #3a3a3a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.message-item:hover {
+  transform: translateY(-2px);
+}
+
+.message-item-title {
+  margin: 0 0 0.5rem 0;
+  color: #646cff;
+}
+
+.message-item-text {
+  margin: 0.5rem 0;
+  color: #e0e0e0;
+}
+
+.message-item-date {
+  display: block;
+  font-size: 0.8rem;
+  color: #aaa;
+  text-align: right;
+}
+
+.no-messages {
+  text-align: center;
+  color: #aaa;
+  font-style: italic;
+}
+
+@media (prefers-color-scheme: light) {
+  .message-container, .message-form {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .message-form {
+    background-color: #f5f5f5;
+  }
+  
+  .message-input, .message-textarea {
+    background-color: white;
+    color: #213547;
+    border-color: #ddd;
+  }
+  
+  .message-item {
+    background-color: #f5f5f5;
+  }
+  
+  .message-item-text {
+    color: #333;
+  }
+}
+
+.error-message {
+  color: #ff6b6b;
+  background-color: #3a3a3a;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #ff6b6b;
+}
+
+@media (prefers-color-scheme: light) {
+  .error-message {
+    background-color: #ffebee;
+    color: #d32f2f;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .container, .message-container {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  .form-title {
+    color: #213547;
+  }
+  .message-item {
+    background-color: #f0f0f0;
+  }
+  .link-text {
+    color: #666666;
+  }
+}
